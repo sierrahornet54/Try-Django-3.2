@@ -30,7 +30,7 @@ if not DEBUG:
     ALLOWED_HOSTS += [os.environ.get('DJANGO_ALLOWED_HOST')]
 # MJH: get rid of next two lines:
 else:
-    ALLOWED_HOSTS += [os.environ.get('DJANGO_ALLOWED_HOST')]
+    ALLOWED_HOSTS += [".ondigitalocean.app",]
 
 # Application definition
 # python manage.py makemigrations
