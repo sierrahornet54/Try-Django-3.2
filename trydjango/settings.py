@@ -28,8 +28,9 @@ ENV_ALLOWED_HOST = os.environ.get('DJANGO_ALLOWED_HOST') or None
 ALLOWED_HOSTS = []
 if not DEBUG:
     ALLOWED_HOSTS += [os.environ.get('DJANGO_ALLOWED_HOST')]
+# MJH: get rid of next two lines:
 else:
-    ALLOWED_HOSTS = [*]
+    ALLOWED_HOSTS += [os.environ.get('DJANGO_ALLOWED_HOST')]
 
 # Application definition
 # python manage.py makemigrations
