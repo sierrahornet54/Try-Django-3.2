@@ -29,6 +29,8 @@ ALLOWED_HOSTS = []
 #ALLOWED_HOSTS += [".ondigitalocean.app",]
 if not DEBUG:
     ALLOWED_HOSTS += [os.environ.get('DJANGO_ALLOWED_HOST')]
+else:
+    ALLOWED_HOSTS += [".ondigitalocean.app",]
 
 # Application definition
 # python manage.py makemigrations
