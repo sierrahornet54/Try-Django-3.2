@@ -26,11 +26,11 @@ DEBUG = str(os.environ.get('DEBUG')) == "1" # 1 == True
 
 ENV_ALLOWED_HOST = os.environ.get('DJANGO_ALLOWED_HOSTS') or None
 ALLOWED_HOSTS = []
-ALLOWED_HOSTS += [".ondigitalocean.app",]
+#ALLOWED_HOSTS += [".ondigitalocean.app",]
 if not DEBUG:
     ALLOWED_HOSTS += [os.environ.get('DJANGO_ALLOWED_HOSTS')]
-else:
-    ALLOWED_HOSTS += [".ondigitalocean.app",]
+#else:
+#    ALLOWED_HOSTS += [".ondigitalocean.app",]
 
 # Application definition
 # python manage.py makemigrations
